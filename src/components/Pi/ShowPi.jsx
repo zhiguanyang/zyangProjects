@@ -4,7 +4,12 @@ import { useParams } from "react-router-dom";
 import "./Pi.css";
 
 const ShowPi = () => {
-  const [pi, setPi] = useState([]);
+  const [pi, setPi] = useState({
+    id: 0,
+    rawMaterial: "",
+    product: "",
+    scientist: ""
+  });
   const { id } = useParams();
   const url = "https://zyangpi.onrender.com/pis";
 

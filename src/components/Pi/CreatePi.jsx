@@ -6,6 +6,7 @@ import './Pi.css';
 const createPi = () => {
     const navigate = useNavigate()
     const [pi, setPi] = useState({
+        id: 0,
         rawMaterial: "",
         product: "",
         scientist: ""
@@ -21,6 +22,7 @@ const createPi = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newPi = {
+            id: 0,
             rawMaterial: pi.rawMaterial,
             product: pi.product,
             scientist: pi.scientist

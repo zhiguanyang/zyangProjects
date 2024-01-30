@@ -10,6 +10,7 @@ const EditPi = () => {
     const { id } = useParams();
     const navigate = useNavigate()
     const [pi, setPi] = useState({
+        id: 0,
         rawMaterial: "",
         product: "",
         scientist: ""
@@ -42,7 +43,7 @@ const EditPi = () => {
             scientist: pi.scientist
         };
 
-        axios.put(url, JSON.stringify(newPi), {
+        axios.put(url, newPi, {
             headers: {
                 "Content-Type": "application/json",
             },

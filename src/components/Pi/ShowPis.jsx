@@ -19,46 +19,47 @@ const ShowPis = () => {
   }
 
 
-    return (
-      <div className="mt-5">
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>Raw Material</th>
-              <th>Product</th>
-              <th>Scientist</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {pis.map((pi) => {
-              return (
-                <tr key={pi.id}>
-                  <td>{pi.rawMaterial}</td>
-                  <td>{pi.product}</td>
-                  <td>{pi.scientist}</td>
-                  <td>
-                    <Link to={`/edit-pi/${pi.id}`}>
-                      <i className="fa fa-pencil" aria-hidden="true">Edit</i>
-                    </Link>
-                    <Link to={`/show-pi/${pi.id}`}>
-                      <i className="fa fa-eye" aria-hidden="true">Show</i>
-                    </Link>
+  return (
+    <div className="mt-5">
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>Raw Material</th>
+            <th>Product</th>
+            <th>Scientist</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {pis.map((pi) => {
+            return (
+              <tr key={pi.id}>
+                <td>{pi.rawMaterial}</td>
+                <td>{pi.product}</td>
+                <td>{pi.scientist}</td>
+                <td>
+                  <Link to={`/edit-pi/${pi.id}`}>
+                    <i className="fa fa-pencil" aria-hidden="true">Edit</i>
+                  </Link>
+                  <Link to={`/show-pi/${pi.id}`}>
+                    <i className="fa fa-eye" aria-hidden="true">Show</i>
+                  </Link>
 
-                    <i
-                      className="fa fa-trash-o"
-                      aria-hidden="true"
-                      onClick={() => deletePi(pi.id)}
-                    >Delete</i>
+                  <i
+                    className="fa fa-trash-o"
+                    aria-hidden="true"
+                    onClick={() => deletePi(pi.id)}
+                  >Delete</i>
 
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    );
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+
 }
 
 export default ShowPis;
