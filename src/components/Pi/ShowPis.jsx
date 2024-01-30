@@ -7,8 +7,8 @@ const ShowPis = () => {
 
   const [pis, setPis] = useState([]);
 
-  useEffect(async () => {
-    await axios.get("https://zyangpi.onrender.com/pis").then((response) => {
+  useEffect(() => {
+    axios.get("https://zyangpi.onrender.com/pis").then((response) => {
       setPis(response.data.data);
     })
   }, [])
