@@ -18,9 +18,7 @@ const ShowPis = () => {
     setPis(pis.filter((pi) => pi.id !== id))
   }
 
-  if (pis.length < 0) {
-    return <h1>no user found</h1>;
-  } else {
+
     return (
       <div className="mt-5">
         <table className="table table-striped">
@@ -61,7 +59,6 @@ const ShowPis = () => {
         </table>
       </div>
     );
-  }
 }
 
 export default ShowPis;
