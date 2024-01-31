@@ -11,7 +11,7 @@ const createPi = () => {
         product: "",
         scientist: ""
     });
-    const handleChange = (e) => {
+    const handleChange = async (e) => {
         const value = e.target.value;
         setPi({
             ...pi,
@@ -19,7 +19,7 @@ const createPi = () => {
         });
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const newPi = {
             id: 0,
