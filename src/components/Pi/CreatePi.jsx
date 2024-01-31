@@ -27,7 +27,7 @@ const createPi = () => {
             product: pi.product,
             scientist: pi.scientist
         };
-        axios.post("https://zyangpi.onrender.com/pis", newPi)
+        await axios.post("https://zyangpi.onrender.com/pis", newPi)
         navigate("/");
     };
 
