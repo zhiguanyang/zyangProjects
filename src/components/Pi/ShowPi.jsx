@@ -17,8 +17,8 @@ const ShowPi = () => {
     getPi();
   }, []);
 
-  const getPi = () => {
-    axios
+  const getPi = async () => {
+    await axios
       .get(url.concat("/") + id)
       .then((response) => {
         setPi(response.data.data);
