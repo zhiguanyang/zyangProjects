@@ -26,7 +26,7 @@ const EditPi = () => {
                 setPi(response.data.data);
             })
     };
-    const handleChange = (e) => {
+    const handleChange = async (e) => {
         const value = e.target.value;
         setPi({
             ...pi,
@@ -34,7 +34,7 @@ const EditPi = () => {
         });
     }
 
-    const handleEdit = (e) => {
+    const handleEdit = async (e) => {
         e.preventDefault();
         const newPi = {
             id: parseInt(id),
